@@ -1,10 +1,11 @@
 
 
 body    {
-    
+    margin : 0 auto ;
+    min-width : 200px ;
     display : grid ;
     grid-template-areas :
-      'header' 
+      'top' 
       'hero'
       'buttons'
       'upcoming'
@@ -13,7 +14,7 @@ body    {
 }
 
 header { 
-    grid-area : 'header' ;
+    grid-area : 'top' ;
     position : relative ; 
     }
 
@@ -23,24 +24,24 @@ header {
 }
 
 #homeD, #shoppingD, #emailD {
-    grid-area : 'header' ;
+    grid-area : 'top' ;
     list-style-type : none ;
     display : inline-block ; 
+    displa
 }
 
 #headerdivide    { 
     height: 3px ;
-    color : #703F12 ;
     background-color : #703F12 ;
     margin : 0
 }
 
-#homeHP {
-    display : block ;
-    margin-left : 0 ;
-    margin-right : 0 ;
-    height : auto ;
-    max-width : 480px
+@media (max-width : 480px) {
+    #homeHP {
+        display : block ;
+        height : auto ;
+        max-width : 480px
+    }
 }
 
 h1, h2  {
@@ -85,25 +86,23 @@ p   {
 }
 
 @media (min-width : 481px) {
-    
+
     #heroD {
-        display : inline ;
-        margin-left : 0 ;
-        margin-right : 0 ;
+        display : block ;
         height : auto ;
     }
     
     
     #homeR {
         display : inline ;
-        margin : -5 ;
+        margin : -5 0 ;
         height : 1310px ;
         width : 323px ;
     }
     
     #homeL {
         display : inline ;
-        margin : -5 ;
+        margin : -5 0 ;
         height : 1310px ;
         width : 323px ;
     }
