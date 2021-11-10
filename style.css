@@ -14,23 +14,36 @@ body    {
 }
 
 header { 
+    grid-area : 'top'
+}
+section#hero { 
+    grid-area: 'hero'
+}
+section#buttons { 
+    grid-area: 'buttons'
+}
+
+header { 
     grid-area : 'top' ;
     position : relative ; 
     }
 
 
 #logo {
+    grid-area : top ;
     width : 274px ;
 }
 
 #homeD, #shoppingD, #emailD {
     grid-area : 'top' ;
+    display: flex ;
     list-style-type : none ;
-    display : inline-block ; 
-    displa
+    
+    
 }
 
 #headerdivide    { 
+    grid-area : top ;
     height: 3px ;
     background-color : #703F12 ;
     margin : 0
@@ -38,6 +51,7 @@ header {
 
 @media (max-width : 480px) {
     #homeHP {
+        grid-area : 'hero' ;
         display : block ;
         height : auto ;
         max-width : 480px
@@ -87,13 +101,15 @@ p   {
 
 @media (min-width : 481px) {
 
-    #heroD {
+    #homeH {
+        grid-area : 'hero' ;
         display : block ;
         height : auto ;
     }
     
     
     #homeR {
+        grid-area : 'hero' ;
         display : inline ;
         margin : -5 0 ;
         height : 1310px ;
@@ -101,6 +117,7 @@ p   {
     }
     
     #homeL {
+        grid-area : 'hero' ;
         display : inline ;
         margin : -5 0 ;
         height : 1310px ;

@@ -9,9 +9,9 @@
 </head>
 <body>
     <header>
-        <section id="top">
+        
             
-                    <img src="./media/images/RainyDays_Logo.png" alt="Rainydays logo" id="logo">
+            <img src="./media/images/RainyDays_Logo.png" alt="Rainydays logo" id="logo">
            
         
 
@@ -25,7 +25,7 @@
                   
             <hr id="headerdivide">
 
-        </section>
+        
     </header>
 
         <section id="hero">
@@ -33,15 +33,26 @@
             <div class="row">
                 <div class="column"> 
                     
-                   
+                    <picture>
                         <img src="./media/images/Rainydays-homeL.jpg" alt="Kayak paddling in the sunset" id="homeL">
-                        <img src="./media/images/Rainydays-homeH.jpg" alt="Man looking at sunset" id="heroD">
+                        <source media="(min-width:481px)" srcset="./media/images/Rainydays-homeL">
+                    </picture>
+
+                    <picture>
+                        <img src="./media/images/Rainydays-homeH.jpg" alt="Man looking at sunset" id="homeH">
+                        <source media="(min-width:481px)" srcset="./media/images/Rainydays-homeH">
+                    </picture>
+
+                    <picture>
                         <img src="./media/images/Rainydays-homeR.jpg" alt="Moon in sunset" id="homeR">
-                    
+                        <source media="(min-width:481px)" srcset="./media/images/Rainydays-homeR">
+                    </picture>
+
                 </div> 
             </div> 
                 <picture>
                     <img src="./media/images/Rainydays-homeHP.jpg" alt="Woman in orange jacket" id="homeHP">
+                    <source media="(max-width:480px)" srcset="./media/images/Rainydays-homeHP">
                 </picture>
 
         </section> 
