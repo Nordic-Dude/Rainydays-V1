@@ -2,7 +2,7 @@
 
 body    {
     margin : 0 auto ;
-    min-width : 200px ;
+    min-width : 400px ;
     display : grid ;
     grid-template-areas :
       'top' 
@@ -13,15 +13,21 @@ body    {
       box-sizing : border-box ;
 }
 
-header { 
-    grid-area : 'top'
+section#top { 
+    grid-area : 'top' ;
 }
 section#hero { 
-    grid-area: 'hero'
+    grid-area: 'hero' ;
 }
 section#buttons { 
-    grid-area: 'buttons'
+    grid-area: 'buttons' ;
 }
+section#upcoming {
+    grid-area:  'upcoming';
+}
+section#foot {
+    grid-area:  'foot';
+  }
 
 header { 
     grid-area : 'top' ;
@@ -34,16 +40,23 @@ header {
     width : 274px ;
 }
 
-#homeD, #shoppingD, #emailD {
-    grid-area : 'top' ;
-    display: flex ;
+nav#Amenu {
     list-style-type : none ;
-    
-    
+    grid-area : 'top' ;
+    display : block ;
+    position : absolute ;
+    flex-direction : row ;
+    right: 20px ;
+    top: 20px ;
+    justify-content: flex-end ;
+    align-items: baseline;
 }
+
+
 
 #headerdivide    { 
     grid-area : top ;
+    display: block;
     height: 3px ;
     background-color : #703F12 ;
     margin : 0
@@ -67,6 +80,9 @@ h1, h2  {
 }
 
 #women, #men {
+    display : flex ;
+    flex-direction : row ;
+    justify-content : space-evenly ;
     font-family : 'Raleway', sans-serif ;
     font-size : 36px ;
     width : 300px ;
@@ -75,15 +91,10 @@ h1, h2  {
 
 #women {
     background-color: #B35600;
-    margin-left : 10%
-    
 }
 
 #men {
     background-color: #0D87A6;
-    float: right;
-    margin-right : 10%
-    
 }
 
 
@@ -108,19 +119,11 @@ p   {
     }
     
     
-    #homeR {
+    #homeR, #homeL {
         grid-area : 'hero' ;
         display : inline ;
         margin : -5 0 ;
         height : 1310px ;
-        width : 323px ;
     }
     
-    #homeL {
-        grid-area : 'hero' ;
-        display : inline ;
-        margin : -5 0 ;
-        height : 1310px ;
-        width : 323px ;
-    }
 }
