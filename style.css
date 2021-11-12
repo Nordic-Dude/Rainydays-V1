@@ -15,7 +15,6 @@ body    {
 
 header { 
     grid-area: top;
-    position: absolute;
 }
 #hero { 
     grid-area: 'hero';
@@ -30,20 +29,15 @@ footer {
     grid-area: 'foot';
   }
 
-header { 
-    grid-area: 'top';
-    position: relative; 
-    }
+
 
 
 
 #logo {
     grid-area: top;
     display: flex;
-    position: absolute;
     width: 274px;
-    left: 45px;
-    top: 36px;
+    margin: 25px 0 5px 35px;
 }
 
 
@@ -52,9 +46,13 @@ ul {
     display: flex;
     position: absolute;
     justify-content: flex-end;
+    list-style-type: none;
     right: 20px;
     top: 20px;
-    list-style-type: none;
+}
+
+#homeD, #shoppingD, #emailD {
+    margin: 35px 25% 0 0 ;
 }
 
 #headerdivide    { 
@@ -120,14 +118,14 @@ p   {
 
     #homeH {
         grid-area : 'hero' ;
-        display : block ;
+        /*display : block ;*/
         height : auto ;
     }
     
     
     #homeR, #homeL {
         grid-area : 'hero' ;
-        display : block ;
+        /*display : block ;*/
         margin : -5 0 ;
         height : 1310px ;
     }
