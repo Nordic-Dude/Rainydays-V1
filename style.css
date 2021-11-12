@@ -1,8 +1,8 @@
-* { box-sizing: border-box; }
+* { 
+    box-sizing: border-box; 
+}
 
 body    {
-   
-    min-width: 400px;
     display: grid;
     grid-template-areas:
       'top' 
@@ -10,12 +10,12 @@ body    {
       'buttons'
       'upcoming'
       'foot';
-      
+      min-width: 400px;
 }
 
 header { 
     grid-area: top;
-    position: relative;
+    position: absolute;
 }
 #hero { 
     grid-area: 'hero';
@@ -46,16 +46,14 @@ header {
     top: 36px;
 }
 
-nav#Amenu {
+
+ul {
     grid-area: 'top';
-    display: block;
+    display: flex;
     position: absolute;
     justify-content: flex-end;
     right: 20px;
     top: 20px;
-}
-
-ul {
     list-style-type: none;
 }
 
@@ -133,5 +131,4 @@ p   {
         margin : -5 0 ;
         height : 1310px ;
     }
-    
 }
