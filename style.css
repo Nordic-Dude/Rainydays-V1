@@ -32,12 +32,11 @@ footer {
 
 
 
-
 #logo {
     grid-area: top;
     display: flex;
-    width: 274px;
-    margin: 25px 0 5px 35px;
+    width: 80px;
+    margin: 15px 0 5px 25px;
 }
 
 
@@ -45,14 +44,38 @@ ul {
     grid-area: 'top';
     display: flex;
     position: absolute;
-    justify-content: flex-end;
     list-style-type: none;
     right: 20px;
-    top: 20px;
+    top: 37px;
+    
 }
 
 #homeD, #shoppingD, #emailD {
-    margin: 35px 25% 0 0 ;
+    height: 35px;
+}
+
+#homeD {
+    display: flex;
+    left: 260px;
+    top: 25px;
+    position: fixed;
+    border-bottom: 30px black;
+    
+    
+}
+
+#shoppingD {
+    display: flex;
+    left: 320px;
+    top: 25px;
+    position: fixed;
+}
+
+#emailD {
+    display: flex;
+    left: 380px;
+    top: 25px;
+    position: fixed;
 }
 
 #headerdivide    { 
@@ -60,7 +83,8 @@ ul {
     display: block;
     height: 3px;
     background-color: #703F12;
-    margin: 0;
+    top: 89px
+    
 }
 
 
@@ -69,6 +93,10 @@ ul {
     display: block;
     height: auto;
     max-width: 480px;
+}
+
+#homeR, #homeL ,#homeH {
+    display: none
 }
 
 @font-face {
@@ -84,13 +112,13 @@ h1, h2  {
 }
 
 #women, #men {
-    display : flex ;
-    flex-direction : row ;
-    justify-content : space-evenly ;
-    font-family : 'Raleway', sans-serif ;
-    font-size : 36px ;
-    width : 300px ;
-    height : 100px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    width: 300px;
+    height: 100px;
 }
 
 #women {
@@ -110,23 +138,56 @@ footer  {
 }
 
 p   {
-    margin-left : 20% ;
-    padding-top : 15px ;
+    margin-left: 20%;
+    padding-top: 15px;
 }
 
-@media (min-width : 481px) {
+@media (min-width: 481px) {
+    #logo {
+        grid-area: top;
+        display: flex;
+        width: 274px;
+        margin: 25px 0 5px 35px;
+    }
+
+    ul {
+        grid-area: 'top';
+        display: flex;
+        position: absolute;
+        justify-content: flex-end;
+        list-style-type: none;
+        right: 20px;
+        top: 20px;
+    }
+
+    #homeD, #shoppingD, #emailD {
+        margin: 35px 25% 0 0;
+    }
+
+    #headerdivide    { 
+        grid-area: top;
+        display: block;
+        height: 3px;
+        background-color: #703F12;
+        
+    }
 
     #homeH {
-        grid-area : 'hero' ;
-        /*display : block ;*/
-        height : auto ;
+        grid-area: 'hero';
+        display: inline-flex;
+        height: auto;
+        line-height: 0;
+        
+        
     }
     
     
     #homeR, #homeL {
-        grid-area : 'hero' ;
-        /*display : block ;*/
-        margin : -5 0 ;
-        height : 1310px ;
+        grid-area: 'hero';
+        display: inline-flex;
+        line-height: 0;
+        
+        height: 1310px;
+        
     }
 }
