@@ -52,6 +52,7 @@ ul {
 
 #homeD, #shoppingD, #emailD {
     height: 35px;
+    grid-area: 'top';
 }
 
 #homeD {
@@ -59,8 +60,6 @@ ul {
     left: 260px;
     top: 25px;
     position: fixed;
-    border-bottom: 30px black;
-    
     
 }
 
@@ -69,6 +68,7 @@ ul {
     left: 320px;
     top: 25px;
     position: fixed;
+
 }
 
 #emailD {
@@ -90,12 +90,13 @@ ul {
 
 #homeHP {
     grid-area: 'hero';
-    display: block;
-    height: auto;
-    max-width: 480px;
+    width: 100%;
+    left: 0px;
+    top: 94px;
 }
 
 #homeR, #homeL ,#homeH {
+    grid-area: 'hero';
     display: none
 }
 
@@ -108,29 +109,49 @@ h1, h2  {
     font-family: 'Raleway', sans-serif; 
     font-size: 36px;
     text-align: center;
+}
+
+h1 {
+    grid-area: 'buttons';
     margin-top: 5%;
 }
 
+h2 {
+    grid-area: 'upcoming';
+    margin-top: 12%;
+}
+
 #women, #men {
-    display: flex;
+    grid-area: 'buttons';
+    position: absolute;
     flex-direction: row;
-    justify-content: space-evenly;
+    align-items: center;
     font-family: 'Raleway', sans-serif;
-    font-size: 36px;
-    width: 300px;
-    height: 100px;
+    width: 120px;
+    height: 40px;
+    margin: 90px 0 25px 0;
 }
 
 #women {
     background-color: #B35600;
+    left: 15%;
+    top: 474px
 }
 
 #men {
     background-color: #0D87A6;
+    right: 15%;
+    top: 474px;
 }
 
+#upcoming1, #upcoming2 {
+    grid-area: 'upcoming';
+    /*display: flex;*/
+}
 
-
+#upcoming1 {
+    right: 15%;
+}
 
 footer  {
     
@@ -189,5 +210,20 @@ p   {
         
         height: 1310px;
         
+    }
+
+    #homeHP {
+        grid-area: 'hero';
+        display: none;
+    }
+
+    #women, #men {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        font-family: 'Raleway', sans-serif;
+        font-size: 36px;
+        width: 300px;
+        height: 100px;
     }
 }
