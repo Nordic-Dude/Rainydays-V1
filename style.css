@@ -11,7 +11,10 @@ body    {
       'upcoming'
       'foot';
       min-width: 400px;
+      grid-area: auto;
 }
+
+
 
 header { 
     grid-area: top;
@@ -57,7 +60,7 @@ ul {
 
 #homeD {
     display: flex;
-    left: 260px;
+    left: 280px;
     top: 25px;
     position: fixed;
     
@@ -65,7 +68,7 @@ ul {
 
 #shoppingD {
     display: flex;
-    left: 320px;
+    left: 340px;
     top: 25px;
     position: fixed;
 
@@ -73,7 +76,7 @@ ul {
 
 #emailD {
     display: flex;
-    left: 380px;
+    left: 400px;
     top: 25px;
     position: fixed;
 }
@@ -146,21 +149,35 @@ h2 {
 
 #upcoming1, #upcoming2 {
     grid-area: 'upcoming';
-    /*display: flex;*/
+    height: 148px;
+    display: flex;
+    border: black;
+    position: absolute;
+    flex-direction: row;
 }
 
 #upcoming1 {
+    left: 15%;
+}
+
+#upcoming2 {
     right: 15%;
 }
 
 footer  {
-    
+    grid-area: 'foot';
+    position: absolute;
+    display: flex;
     background: rgba(32, 104, 122, 0.42);
+    height: 95px;
+    width: 100%;
+    top: 890px;
 }
 
 p   {
-    margin-left: 20%;
-    padding-top: 15px;
+    margin-left: 5%;
+    padding-top: 5px;
+    
 }
 
 @media (min-width: 481px) {
@@ -226,4 +243,41 @@ p   {
         width: 300px;
         height: 100px;
     }
+
+    #women {
+        background-color: #B35600;
+        left: 15%;
+        top: 474px
+    }
+    
+    #men {
+        background-color: #0D87A6;
+        right: 15%;
+        top: 474px;
+    }
+    
+    #upcoming1, #upcoming2 {
+        grid-area: 'upcoming';
+        height: 148px;
+        /*display: flex;*/
+    }
+    
+    #upcoming1 {
+        left: 15%;
+    }
+    
+    #upcoming2 {
+        right: 15%;
+    }
+    
+    footer  {
+        
+        background: rgba(32, 104, 122, 0.42);
+    }
+    
+    p   {
+        margin-left: 20%;
+        padding-top: 15px;
+    }
+    
 }
