@@ -11,7 +11,12 @@ body    {
       'upcoming'
       'foot';
       min-width: 400px;
-      grid-area: auto;
+      grid-template-areas:  "top"
+                            "hero"
+                            "buttons"
+                            "upcoming"
+                            "foot"
+                            ;
 }
 
 
@@ -44,41 +49,27 @@ footer {
 
 
 ul {
-    grid-area: 'top';
-    display: flex;
-    position: absolute;
     list-style-type: none;
-    right: 20px;
-    top: 37px;
-    
 }
 
 #homeD, #shoppingD, #emailD {
     height: 35px;
     grid-area: 'top';
+    display: flex;
+    top: 25px;
+    position: absolute
 }
 
 #homeD {
-    display: flex;
     left: 280px;
-    top: 25px;
-    position: fixed;
-    
 }
 
 #shoppingD {
-    display: flex;
     left: 340px;
-    top: 25px;
-    position: fixed;
-
 }
 
 #emailD {
-    display: flex;
     left: 400px;
-    top: 25px;
-    position: fixed;
 }
 
 #headerdivide    { 
