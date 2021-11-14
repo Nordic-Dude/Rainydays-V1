@@ -38,23 +38,19 @@ footer {
   }
 
 
-
-
 #logo {
-    grid-area: top;
     display: flex;
     width: 80px;
     margin: 15px 0 5px 25px;
 }
 
 
-li {
+ul {
     list-style-type: none;
 }
 
 #homeD, #shoppingD, #emailD {
     height: 35px;
-    grid-area: 'top';
     display: flex;
     top: 25px;
     position: absolute
@@ -73,7 +69,6 @@ li {
 }
 
 #headerdivide    { 
-    grid-area: top;
     display: block;
     height: 3px;
     background-color: #703F12;
@@ -83,14 +78,12 @@ li {
 
 
 #homeHP {
-    grid-area: 'hero';
     width: 100%;
     left: 0px;
     top: 94px;
 }
 
 #homeR, #homeL ,#homeH {
-    grid-area: 'hero';
     display: none
 }
 
@@ -106,17 +99,14 @@ h1, h2  {
 }
 
 h1 {
-    grid-area: 'buttons';
     margin-top: 5%;
 }
 
 h2 {
-    grid-area: 'upcoming';
     margin-top: 12%;
 }
 
 #women, #men {
-    grid-area: 'buttons';
     position: absolute;
     flex-direction: row;
     align-items: center;
@@ -139,7 +129,6 @@ h2 {
 }
 
 #upcoming1, #upcoming2 {
-    grid-area: 'upcoming';
     height: 148px;
     display: flex;
     border: black;
@@ -156,45 +145,79 @@ h2 {
 }
 
 footer  {
-    grid-area: 'foot';
     position: absolute;
     display: flex;
     background: rgba(32, 104, 122, 0.42);
-    height: 95px;
+    height: 55px;
     width: 100%;
     top: 890px;
 }
 
 p   {
-    margin-left: 5%;
+    display: flex;
+    
+    justify-content: center;
     padding-top: 5px;
     
 }
 
 @media (min-width: 481px) {
+    
+    body    {
+        display: grid;
+        grid-template-areas:
+          'top' 
+          'hero'
+          'side'
+          'buttons'
+          'upcoming'
+          'foot';
+          min-width: 400px;
+          grid-template-areas:  "top"
+                                "side hero side"
+                                "side buttons side"
+                                "side upcoming side"
+                                "foot"
+                                ;
+    }
+    
+    
+    
+    #side {
+        grid-area: 'side';
+    }
+    
+
     #logo {
-        grid-area: top;
         display: flex;
         width: 274px;
         margin: 25px 0 5px 35px;
     }
 
     ul {
-        grid-area: 'top';
-        display: flex;
-        position: absolute;
-        justify-content: flex-end;
         list-style-type: none;
-        right: 20px;
-        top: 20px;
     }
-
+    
     #homeD, #shoppingD, #emailD {
-        margin: 35px 25% 0 0;
+        height: 48px;
+        display: flex;
+        top: 75px;
+        position: absolute
+    }
+    
+    #homeD {
+        left: 1450px;
+    }
+    
+    #shoppingD {
+        left: 1600px;
+    }
+    
+    #emailD {
+        left: 1750px;
     }
 
     #headerdivide    { 
-        grid-area: top;
         display: block;
         height: 3px;
         background-color: #703F12;
@@ -202,73 +225,100 @@ p   {
     }
 
     #homeH {
-        grid-area: 'hero';
-        display: inline-flex;
-        height: auto;
-        line-height: 0;
-        
-        
+        display: flex;
+        position: absolute;
+        height: 598px;
+        left: 323px;
     }
     
-    
     #homeR, #homeL {
-        grid-area: 'hero';
         display: inline-flex;
         line-height: 0;
-        
+        position: absolute;
         height: 1310px;
-        
+    }
+
+    #homeR {
+        right: 0%;
+    }
+
+    #homeL {
+        left: 0%;
     }
 
     #homeHP {
-        grid-area: 'hero';
         display: none;
     }
 
-    #women, #men {
+    #buttons, #upcoming {
+        align-items: center;
+    }
+
+    h1, h2  {
+        justify-content: center;
         display: flex;
+        position: absolute;
+        font-family: 'Raleway', sans-serif; 
+        font-size: 36px;
+    }
+    
+    h1 {
+        
+        top: 820px;
+    }
+    
+    h2 {
+        top: 950px;
+    }
+
+    #women, #men {
+        position: absolute;
         flex-direction: row;
-        justify-content: space-evenly;
+        align-items: center;
         font-family: 'Raleway', sans-serif;
         font-size: 36px;
-        width: 300px;
-        height: 100px;
+        width: 250px;
+        height: 80px;
+        top: 940px;
     }
 
     #women {
         background-color: #B35600;
-        left: 15%;
-        top: 474px
+        left: 23%;
     }
     
     #men {
         background-color: #0D87A6;
-        right: 15%;
-        top: 474px;
+        right: 23%;
     }
     
     #upcoming1, #upcoming2 {
-        grid-area: 'upcoming';
+        position: absolute;
         height: 148px;
-        /*display: flex;*/
+        display: flex;
+        top: 1300px;
     }
     
     #upcoming1 {
-        left: 15%;
+        left: 35%;
     }
     
     #upcoming2 {
-        right: 15%;
+        right: 35%;
     }
     
     footer  {
-        
+        position: absolute;
+        height: 50px;
+        left: 0px;
+        top: 1518px;
         background: rgba(32, 104, 122, 0.42);
     }
     
     p   {
-        margin-left: 20%;
-        padding-top: 15px;
+        padding: 5px 0 0 210px;
+        display: flex;
+        flex-direction: column;
     }
     
 }
