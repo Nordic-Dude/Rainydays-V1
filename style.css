@@ -83,7 +83,7 @@ ul {
     top: 94px;
 }
 
-#homeR, #homeL ,#homeH {
+#homeR, #homeL ,#homeH, #homeRR, #homeLL, #homeRRR, #homeLLL {
     display: none
 }
 
@@ -95,6 +95,27 @@ ul {
 @font-face {
     font-family: "Roboto";
     src: url("./media/fonts/Roboto_variations/Roboto-Medium.ttf") format("truetype");
+}
+
+#phead {
+    position: relative;
+    left: 30%;
+}
+
+#products {
+    padding-top: 50px;
+    flex-direction: row;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#M1, #M2, #M3, #M4 {
+    
+}
+
+#W1, #W2, #W3, #W4 {
+
 }
 
 h1, h2, h3  {
@@ -175,16 +196,18 @@ p   {
     body    {
         display: grid;
         grid-template-areas:
-          'top' 
-          'hero'
-          'side'
-          'buttons'
-          'upcoming'
-          'foot';
-          min-width: 400px;
-          grid-template-areas:  "top"
+        'top' 
+        'hero'
+        'side'
+        'products'
+        'buttons'
+        'upcoming'
+        'foot';
+        min-width: 400px;
+        grid-template-areas:    "top"
                                 "side hero side"
                                 "side buttons side"
+                                "side products side"
                                 "side upcoming side"
                                 "foot"
                                 ;
@@ -277,19 +300,12 @@ p   {
     }
 
     #M1, #M2, #M3, #M4 {
-        display: inline-flex;
-        flex-direction: column;
+        
     }
 
-    #mp {
-       display: flex;
-       right: 300px;
+    #W1, #W2, #W3, #W4 {
+
     }
-
-
-    /*#buttons, #upcoming {
-        align-items: ;
-    }*/
 
     h1, h2, h3 { /* REMEMBER TO FIX THE CENTER TEXT ISSUE */
         display: flex;
