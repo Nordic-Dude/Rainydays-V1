@@ -232,7 +232,7 @@ p   {
     }
     
     #homeR, #homeL {
-        display: inline-flex;
+        display: flex;
         line-height: 0;
         position: absolute;
         height: 1310px;
@@ -250,11 +250,11 @@ p   {
         display: none;
     }
 
-    #buttons, #upcoming {
-        align-items: center;
-    }
+    /*#buttons, #upcoming {
+        align-items: ;
+    }*/
 
-    h1, h2  {
+    h1, h2  { /* REMEMBER TO FIX THE CENTER TEXT ISSUE */
         justify-content: center;
         display: flex;
         position: absolute;
