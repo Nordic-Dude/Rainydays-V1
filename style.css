@@ -7,18 +7,12 @@ body    {
     grid-template-areas:
       'top' 
       'hero'
+      'products'
       'buttons'
       'upcoming'
       'foot';
       min-width: 400px;
-      grid-template-areas:  "top"
-                            "hero"
-                            "buttons"
-                            "upcoming"
-                            "foot"
-                            ;
 }
-
 
 
 header { 
@@ -26,6 +20,9 @@ header {
 }
 #hero { 
     grid-area: 'hero';
+}
+section#products {
+    grid-area: 'products';
 }
 section#buttons { 
     grid-area: 'buttons';
@@ -37,6 +34,10 @@ footer {
     grid-area: 'foot';
   }
 
+
+header {
+    position: relative;
+}
 
 #logo {
     display: flex;
@@ -76,7 +77,6 @@ ul {
     
 }
 
-
 #homeHP {
     width: 100%;
     left: 0px;
@@ -92,7 +92,12 @@ ul {
     src: url("./media/fonts/Raleway_variations/Raleway-Light.ttf") format("truetype");
 }
 
-h1, h2  {
+@font-face {
+    font-family: "Roboto";
+    src: url("./media/fonts/Roboto_variations/Roboto-Medium.ttf") format("truetype");
+}
+
+h1, h2, h3  {
     font-family: 'Raleway', sans-serif; 
     font-size: 36px;
     text-align: center;
@@ -104,6 +109,10 @@ h1 {
 
 h2 {
     margin-top: 12%;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
 }
 
 #women, #men {
@@ -231,18 +240,22 @@ p   {
         left: 323px;
     }
     
-    #homeR, #homeL {
+    #homeR, #homeL, #homeRR, #homeLL {
         display: flex;
         line-height: 0;
         position: absolute;
         height: 1310px;
     }
 
-    #homeR {
+    #homeRR, #homeLL {
+        height: 963px;
+    }
+
+    #homeR, #homeRR {
         right: 0%;
     }
 
-    #homeL {
+    #homeL, #homeLL {
         left: 0%;
     }
 
@@ -250,25 +263,48 @@ p   {
         display: none;
     }
 
+    #phead {
+        position: relative;
+        left: 30%;
+    }
+
+    #products {
+        padding-top: 100px;
+        flex-direction: row;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #M1, #M2, #M3, #M4 {
+        display: inline-flex;
+        flex-direction: column;
+    }
+
+    #mp {
+       display: flex;
+       right: 300px;
+    }
+
+
     /*#buttons, #upcoming {
         align-items: ;
     }*/
 
-    h1, h2  { /* REMEMBER TO FIX THE CENTER TEXT ISSUE */
-        justify-content: center;
+    h1, h2, h3 { /* REMEMBER TO FIX THE CENTER TEXT ISSUE */
         display: flex;
         position: absolute;
-        font-family: 'Raleway', sans-serif; 
-        font-size: 36px;
+        margin-top: auto;
     }
     
     h1 {
-        
-        top: 820px;
+        left: 42%;
+        top: 900px;
     }
     
     h2 {
-        top: 950px;
+        left: 40%;
+        top: 1180px;
     }
 
     #women, #men {
@@ -307,16 +343,23 @@ p   {
         right: 35%;
     }
     
-    footer  {
+    footer, #shopfoot  {
         position: absolute;
         height: 50px;
         left: 0px;
-        top: 1518px;
         background: rgba(32, 104, 122, 0.42);
     }
     
+    footer {
+        top: 1518px;
+    }
+
+    #shopfoot {
+        top: 1171px;
+    }
+
     p   {
-        padding: 5px 0 0 210px;
+        padding: 5px 0 0 410px;
         display: flex;
         flex-direction: column;
     }
