@@ -110,10 +110,35 @@ ul {
     flex-wrap: wrap;
 }
 
+#tline {
+    display: block;
+    width: 80%;
+}
+
+#buy {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    background-color: lightgray;
+    width: 175px;
+    height: 75px;
+}
+
+#checks {
+    text-align: center;
+}
+
+#bold {
+    font-weight: 700;
+}
+
+#abline {
+    width: 40%;
+}
+
 h1, h2, h3  {
+    text-align: center;
     font-family: 'Raleway', sans-serif; 
     font-size: 36px;
-    text-align: center;
 }
 
 h1 {
@@ -124,8 +149,13 @@ h2 {
     margin-top: 12%;
 }
 
+h3 {
+    position: absolute;
+}
+
 p {
     font-family: 'Roboto', sans-serif;
+    max-width: 70%;
 }
 
 #women, #men {
@@ -291,7 +321,7 @@ p   {
         flex-wrap: wrap;
     }
 
-    h1, h2, h3 { /* REMEMBER TO FIX THE CENTER TEXT ISSUE */
+    h1, h2, h3 {
         display: flex;
         position: absolute;
         margin-top: auto;
